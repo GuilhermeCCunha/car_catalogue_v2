@@ -1,10 +1,33 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @car %>
+<form>
 
-<div>
-  <%= link_to "Edit this car", edit_car_path(@car) %> |
-  <%= link_to "Back to cars", cars_path %>
+  <div class="mb-3">
+    <%= label_tag nil, @car.class.human_attribute_name(:description), class: "form-label" %>
+    <%= text_field_tag nil, @car.description, class:"form-control", disabled: true %>
+  </div>
 
-  <%= button_to "Destroy this car", @car, method: :delete %>
-</div>
+  <div class="mb-3">
+    <%= label_tag nil, @car.class.human_attribute_name(:year), class: "form-label" %>
+    <%= text_field_tag nil, @car.year, class:"form-control", disabled: true %>
+  </div>
+
+  <% if !@car.url_image.empty? %>
+
+    <div class="mb-3">
+      <%= label_tag nil, @car.class.human_attribute_name(:url_image), class: "form-label" %>
+      <%= text_field_tag nil,@car.url_image , class:"form-control", disabled: true %>
+    </div>
+
+  <% end %>
+
+  <div class="mb-3">
+    <%= label_tag nil, @car.class.human_attribute_name(:brand), class: "form-label" %>
+    <%= text_field_tag nil, @car.brand.brand_name , class:"form-control", disabled: true %>
+  </div>
+
+</form>
+
+<%= link_to t('links.edit'), edit_car_path(@car), class:"btn btn-primary" %> |
+<%= link_to t('links.back_to') + " #{@car.brand.brand_name}", @car.brand, class:"btn btn-primary"  %> |
+<%= link_to t('links.back_to') + " #{Car.model_name.human(count: :many)}", cars_path, class:"btn btn-primary" %>

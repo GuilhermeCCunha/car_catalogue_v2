@@ -30,4 +30,63 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  current_locale: "English (International)"
+  welcome: "Welcome!"
+  messages:
+    welcome: This is the <b>Car Catalogue</b>, an app that you can register your favorite cars.
+    menu: "To start, choose an option below:"
+    warning: "Warning:\nAll %{brand} cars will also be deleted!\n"
+    confirm: "Are you sure?"
+    select_box: "Select..."
+    optional: "(optional)"
   hello: "Hello world"
+  links:
+    edit: "Edit"
+    show: "Show"
+    delete: "Delete"
+    new: "New"
+    back: "Back"
+    back_to: "Back to"
+  new:
+    car: "New Car"
+    brand: "New Brand"
+  editing:
+    car: "Editing Car"
+    brand: "Editing Brand"
+  showing:
+    car: "Showing Car"
+    brand: "Showing Brand"
+  empty:
+    car: "No car registered."
+    brand: "No brand registered."
+  error:
+    one: "error"
+    other: "errors"
+  error_explanation:
+    brand: "prohibited this brand from being saved:"
+    car: "prohibited this car from being saved:"
+  notices:
+    car:
+      create: "Car was successfully created."
+      update: "Car was successfully updated."
+      destroy: "Car was successfully destroyed."
+    brand:
+      create: "Brand was successfully created."
+      update: "Brand was successfully updated."
+      destroy: "Brand was successfully destroyed."
+  rake_tasks:
+    dev:
+      setup:
+        desc: "Sets up the development environment"
+        dropping: "Dropping DB..."
+        creating: "Creating DB..."
+        migrating: "Migrating DB..."
+        not_dev_env: "You are not in a development environment!"
+      add_cars:
+        desc: "Registers cars"
+        registering: "Registering cars..."
+      add_brands:
+        desc: "Registers brands"
+        registering: "Registering brands..."
+      spinner:
+        success: "Done"

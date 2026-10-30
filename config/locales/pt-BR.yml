@@ -1,0 +1,65 @@
+pt-BR:
+  current_locale: "Português do Brasil"
+  welcome: "Seja Bem-vindo!"
+  messages:
+    welcome: "Este é o <b>Car Catalogue</b>, um app para você cadastrar seus carros favoritos."
+    menu: "Para começar, selecione uma das opções abaixo:"
+    warning: "Atenção:\nTodos os carros da %{brand} também serão excluidos!\n"
+    confirm: "Tem certeza?"
+    select_box: "Selecione..."
+    optional: "(opcional)"
+  hello: "Olá Mundo!"
+  links:
+    edit: "Editar"
+    show: "Mostrar"
+    delete: "Apagar"
+    new: "Novo"
+    back: "Voltar"
+    back_to: "Voltar para" 
+  new:
+    car: "Novo Carro"
+    brand: "Nova Marca"
+  editing:
+    car: "Editando Carro"
+    brand: "Editando Marca"
+  showing:
+    car: "Mostrando Carro"
+    brand: "Mostrando Marca"
+  empty:
+    car: "Nenhum carro cadastrado."
+    brand: "Nenhuma marca cadastrada."
+  error:
+    one: "erro"
+    other: "erros" 
+  error_explanation:
+    brand: 
+      one: "impediu que esta marca fosse salva:"
+      other: "impediram que esta marca fosse salva:"
+    car:
+      one: "impediu que este carro fosse salvo:"
+      other: "impediram que este carro fosse salvo:"    
+  notices:
+    car:
+      create: "O carro foi criado com sucesso."
+      update: "O carro foi atualizado com sucesso."
+      destroy: "O carro foi excluído com sucesso."
+    brand:
+      create: "A marca foi criada com sucesso."
+      update: "A marca foi atualizada com sucesso."
+      destroy: "A marca foi excluída com sucesso."                    
+  rake_tasks:
+    dev:
+      setup:
+        desc: "Configura o ambiente de desenvolvimento"
+        dropping: "Apagando BD..."
+        creating: "Criando BD..."
+        migrating: "Migrando BD..."
+        not_dev_env: "Você não está em ambiente de desenvolvimento!"
+      add_cars:
+        desc: "Cadastra os carros"
+        registering: "Cadastrando carros..."
+      add_brands:
+        desc: "Cadastra as marcas"
+        registering: "Cadastrando marcas..."
+      spinner:
+        success: "Concluído"

@@ -1,10 +1,60 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @brand %>
+<form>
 
-<div>
-  <%= link_to "Edit this brand", edit_brand_path(@brand) %> |
-  <%= link_to "Back to brands", brands_path %>
+  <div class="mb-3">
+    <%= label_tag nil, @brand.class.human_attribute_name(:brand_name), class: "form-label" %>
+    <%= text_field_tag nil, @brand.brand_name, class:"form-control", disabled: true %>
+  </div>
 
-  <%= button_to "Destroy this brand", @brand, method: :delete %>
-</div>
+</form>
+
+<% if @brand.cars.count > 0 %>
+
+  <h4>
+    <% if I18n.locale == :en %>
+      <p><%= @brand.brand_name %> <%= Car.model_name.human(count: @brand.cars.count)%></p>
+    <% elsif I18n.locale.to_s == 'pt-BR' %>
+      <p><%= Car.model_name.human(count: @brand.cars.count)%> da <%= @brand.brand_name %></p>
+    <% end %>
+  </h4>
+
+   <%#= Car.model_name.human(count: @brand.cars.count)%>
+
+
+  <table class="table table-hover border-top">
+    <thead>
+      <tr>
+        <th><%= @brand.cars.human_attribute_name(:description) %></th>
+        <th><%= @brand.cars.human_attribute_name(:year) %></th>
+        <th><%= @brand.cars.human_attribute_name(:url_image) %></th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% @brand.cars.each do |car| %>
+        <tr>
+          <td><%= car.description %></td>
+          <td><%= car.year %></td>
+          <td> <%= image_tag car_url_image(car), size: "125x80", alt: "#{car.description} image" %> </td>
+          <td><%= link_to t('links.show'), car, class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
+          <td><%= link_to t('links.edit'), edit_car_path(car), class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
+          <td><%= link_to t('links.delete'), car, data: { turbo_method: :delete, turbo_confirm: t('messages.confirm') }, class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+
+<% else %>
+
+  <br>
+
+  <P class="fw-bold text-danger text-center"> <%= t('empty.car') %> </P>
+
+  <br>
+
+<% end %>
+
+<%= link_to t('links.edit'), edit_brand_path(@brand), class:"btn btn-primary" %> |
+<%= link_to t('links.back'), brands_path, class:"btn btn-primary" %>

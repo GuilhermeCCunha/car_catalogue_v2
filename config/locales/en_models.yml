@@ -1,0 +1,9 @@
+en:
+  activerecord:
+    models:
+      car:
+        one: Car
+        other: Cars
+      brand: 
+        one: Brand
+        other: Brands

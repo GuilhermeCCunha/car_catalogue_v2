@@ -1,32 +1,38 @@
-<%= form_with(model: car) do |form| %>
+<%= form_with(model: car, local: true) do |form| %>
   <% if car.errors.any? %>
-    <div style="color: red">
-      <h2><%= pluralize(car.errors.count, "error") %> prohibited this car from being saved:</h2>
+    <div id="error_explanation">
+      <h2><%= pluralize(car.errors.count, t('error', count: car.errors.count)) %> <%= t('error_explanation.car', count: car.errors.count) %></h2>
 
       <ul>
-        <% car.errors.each do |error| %>
-          <li><%= error.full_message %></li>
-        <% end %>
+      <% car.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
       </ul>
     </div>
   <% end %>
 
-  <div>
-    <%= form.label :description, style: "display: block" %>
-    <%= form.text_field :description %>
+  <div class="mb-3">
+    <%= form.label :description, class: "form-label" %>
+    <%= form.text_field :description, class:"form-control", placeholder:"Volkswagen Santana" %>
   </div>
 
-  <div>
-    <%= form.label :year, style: "display: block" %>
-    <%= form.number_field :year %>
+  <div class="mb-3">
+    <%= form.label :year, class: "form-label" %>
+    <%= form.number_field :year, class:"form-control", placeholder:"1999" %>
   </div>
 
-  <div>
-    <%= form.label :url_image, style: "display: block" %>
-    <%= form.text_field :url_image %>
+  <div class="mb-3">
+    <%= form.label :url_image, class: "form-label" %>
+    <i class="text-muted"><%= t('messages.optional') %></i>
+    <%= form.text_field :url_image, class:"form-control", placeholder:"https://i.imgur.com/santana.jpeg" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="mb-3">
+    <%= form.label :brand_id, class: "form-label" %>
+    <%= form.select("brand_id", @brand_options, { include_blank: t('messages.select_box') }, class:"form-select") %>
+  </div>
+
+  <div class="mb-4">
+    <%= form.submit nil, class:"btn btn-primary" %>
   </div>
 <% end %>

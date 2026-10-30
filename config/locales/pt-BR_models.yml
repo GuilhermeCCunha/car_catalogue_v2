@@ -1,0 +1,24 @@
+'pt-BR':
+  activerecord:
+    models:
+      car:
+        one: Carro
+        other: Carros
+      brand: 
+        one: Marca
+        other: Marcas     
+    attributes:
+      car:
+        id: Código
+        description: Descrição
+        year: Ano
+        url_image: URL da Imagem
+        brand: Marca
+        brand_id: Marca
+        updated_at: Atualizado em
+        created_at: Criado em
+      brand:  
+        id: Código
+        brand_name: Nome da Marca
+        updated_at: Atualizado em
+        created_at: Criado em
