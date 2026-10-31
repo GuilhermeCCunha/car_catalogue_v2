@@ -18,7 +18,7 @@ namespace :dev do
       %x(rails dev:add_brands)
       %x(rails dev:add_cars)
     else
-      puts I18n.t('rake_tasks.dev.setup.not_dev_env')
+      puts I18n.t('rake_tasks.dev.setup.not_dev_env') # You are not in a development environment!
     end
   end
 
