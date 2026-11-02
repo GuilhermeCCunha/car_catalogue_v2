@@ -30,6 +30,7 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
+  locale_name: "English"
   current_locale: "English (International)"
   welcome: "Welcome!"
   messages:
@@ -47,6 +48,8 @@ en:
     new: "New"
     back: "Back"
     back_to: "Back to"
+  nav_links:
+    home: "Home"
   new:
     car: "New Car"
     brand: "New Brand"

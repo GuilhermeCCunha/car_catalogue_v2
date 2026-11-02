@@ -1,0 +1,10 @@
+<li class="nav-item dropdown" data-turbo-prefetch="false">
+  <a class="nav-link dropdown-toggle text-light" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <%= t('locale_name') %>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-dark dropdown-menu-end">
+    <% I18n.available_locales.each do |locale| %>
+      <li><%= locale_link(locale) %></li>
+    <% end %>
+  </ul>
+</li>

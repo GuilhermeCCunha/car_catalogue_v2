@@ -1,4 +1,5 @@
 pt-BR:
+  locale_name: "Português (BR)"
   current_locale: "Português do Brasil"
   welcome: "Seja Bem-vindo!"
   messages:
@@ -15,7 +16,9 @@ pt-BR:
     delete: "Apagar"
     new: "Novo"
     back: "Voltar"
-    back_to: "Voltar para" 
+    back_to: "Voltar para"
+  nav_links:
+    home: "Início"
   new:
     car: "Novo Carro"
     brand: "Nova Marca"
