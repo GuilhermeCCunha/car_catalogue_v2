@@ -59,6 +59,11 @@ en:
   showing:
     car: "Showing Car"
     brand: "Showing Brand"
+  brands:
+    show:
+      heading:
+        one: "%{brand_name} Car"
+        other: "%{brand_name} Cars"
   empty:
     car: "No car registered."
     brand: "No brand registered."

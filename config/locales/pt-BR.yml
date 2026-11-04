@@ -28,6 +28,11 @@ pt-BR:
   showing:
     car: "Mostrando Carro"
     brand: "Mostrando Marca"
+  brands:
+    show:
+      heading:
+        one: "Carro da %{brand_name}"
+        other: "Carros da %{brand_name}"
   empty:
     car: "Nenhum carro cadastrado."
     brand: "Nenhuma marca cadastrada."

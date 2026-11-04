@@ -12,15 +12,8 @@
 <% if @brand.cars.count > 0 %>
 
   <h4>
-    <% if I18n.locale == :en %>
-      <p><%= @brand.brand_name %> <%= Car.model_name.human(count: @brand.cars.count)%></p>
-    <% elsif I18n.locale.to_s == 'pt-BR' %>
-      <p><%= Car.model_name.human(count: @brand.cars.count)%> da <%= @brand.brand_name %></p>
-    <% end %>
+    <%= t('.heading', count: @brand.cars.count, brand_name: @brand.brand_name) %>
   </h4>
-
-   <%#= Car.model_name.human(count: @brand.cars.count)%>
-
 
   <table class="table table-hover border-top">
     <thead>
