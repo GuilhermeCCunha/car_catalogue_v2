@@ -13,7 +13,7 @@ class CarsController < ApplicationController
 
   # GET /cars/new
   def new
-    @car = Car.new
+    @car = Car.new(brand_id: params[:brand_id])
   end
 
   # GET /cars/1/edit

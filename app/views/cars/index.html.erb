@@ -18,7 +18,7 @@
         <tr>
           <td><%= car.description %></td>
           <td><%= car.year %></td>
-          <td> <%= image_tag car_url_image(car), size: "125x80", alt: "#{car.description} image" %> </td>
+          <td><%= image_tag car_url_image(car), size: "125x80", alt: "#{car.description} image" %></td>
           <td><%= link_to t('links.show'), car, class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
           <td><%= link_to t('links.edit'), edit_car_path(car), class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
           <td><%= link_to t('links.delete'), car, data: { turbo_method: :delete, turbo_confirm: t('messages.confirm') }, class: "link-primary link-underline-opacity-0 link-underline-opacity-100-hover" %></td>
@@ -31,7 +31,7 @@
 
   <br>
 
-  <p class="fw-bold text-danger text-center"> <%= t('empty.car') %> </p>
+  <p class="fw-bold text-danger text-center"><%= t('empty.car') %></p>
 
   <br>
 

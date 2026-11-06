@@ -2,4 +2,8 @@
 
 <%= render 'form', car: @car %>
 
-<%= link_to t('links.back'), cars_path, class:"btn btn-primary" %>
+<% if @car.brand.present? %>
+  <%= link_to t('links.back'), @car.brand, class:"btn btn-primary" %>
+<% else %>
+  <%= link_to t('links.back'), cars_path, class: "btn btn-primary" %>
+<% end %>
