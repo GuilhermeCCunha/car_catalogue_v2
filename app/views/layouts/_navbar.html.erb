@@ -16,6 +16,18 @@
         <li class="nav-item">
           <%= nav_link_to "#{Brand.model_name.human(count: :many)}", brands_path %>
         </li>
+        <li class="nav-item">
+          <% if user_signed_in? %>
+            <%= nav_link_to t('nav_links.profile'), account_profile_path %>
+          <% else %>
+            <%= nav_link_to t('nav_links.sign_in'), new_user_session_path %>
+          <% end %>
+        </li>
+        <% if current_user&.admin? %>
+          <li class="nav-item">
+            <%= nav_link_to t('nav_links.dashboard'), admin_dashboard_path %>
+          </li>
+        <% end %>
       </ul>
       <ul class="navbar-nav">
         <%= render 'layouts/locale_links' %>

@@ -10,6 +10,8 @@ pt-BR:
     select_box: "Selecione..."
     optional: "(opcional)"
   hello: "Olá Mundo!"
+  admin:
+    access_denied: "Accesso negado."
   links:
     edit: "Editar"
     show: "Mostrar"

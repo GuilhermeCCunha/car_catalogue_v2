@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'admin/dashboard'
+  get 'account/profile'
   devise_for :users
   resources :brands
   resources :cars
