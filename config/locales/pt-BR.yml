@@ -10,6 +10,10 @@ pt-BR:
     select_box: "Selecione..."
     optional: "(opcional)"
   hello: "Olá Mundo!"
+  account:
+    profile:
+      admin_access_text: "O admin também pode acessar esta página."
+      welcome_email: "Bem-vindo, %{email}!"
   admin:
     access_denied: "Accesso negado."
   links:
@@ -19,8 +23,15 @@ pt-BR:
     new: "Novo"
     back: "Voltar"
     back_to: "Voltar para"
+    sign_out: "Sair"
   nav_links:
+    sign_in: "Login"
     home: "Início"
+    profile: "Perfil"
+    dashboard: "Painel"
+  titles:
+    profile: "Perfil da Conta"
+    dashboard: "Painel do Admin"
   new:
     car: "Novo Carro"
     brand: "Nova Marca"

@@ -41,6 +41,10 @@ en:
     select_box: "Select..."
     optional: "(optional)"
   hello: "Hello world"
+  account:
+    profile:
+      admin_access_text: "The admin can also access this page."
+      welcome_email: "Welcome, %{email}!"
   admin:
     access_denied: "Access denied."
   links:
@@ -50,8 +54,15 @@ en:
     new: "New"
     back: "Back"
     back_to: "Back to"
+    sign_out: "Sign out"
   nav_links:
+    sign_in: "Sign in"
     home: "Home"
+    profile: "Profile"
+    dashboard: "Dashboard"
+  titles:
+    profile: "Account Profile"
+    dashboard: "Admin Dashboard"
   new:
     car: "New Car"
     brand: "New Brand"
