@@ -15,7 +15,21 @@ pt-BR:
       admin_access_text: "O admin também pode acessar esta página."
       welcome_email: "Bem-vindo, %{email}!"
   admin:
-    access_denied: "Accesso negado."
+    access_denied: "Acesso negado."
+    ban_user:
+      notice: "O usuário %{email} foi banido."
+      alert: "Um admin não pode ser banido."
+    unban_user:
+      notice: "O usuário %{email} foi desbanido."
+    dashboard:
+      email: "E-mail"
+      status: "Status"
+      action: "Ação"
+      banned: "Banido"
+      active: "Ativo"
+      ban: "Banir" # Opções: "Bloquear" ou "Desativar"
+      unban: "Desbanir" # Opções: "Desbloquear" ou "Reativar"
+      no_users: "Nenhum usuário cadastrado!"
   links:
     edit: "Editar"
     show: "Mostrar"

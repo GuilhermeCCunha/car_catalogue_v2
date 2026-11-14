@@ -47,6 +47,20 @@ en:
       welcome_email: "Welcome, %{email}!"
   admin:
     access_denied: "Access denied."
+    ban_user:
+      notice: "User %{email} has been banned."
+      alert: "An admin cannot be banned."
+    unban_user:
+      notice: "User %{email} has been unbanned."
+    dashboard:
+      email: "Email"
+      status: "Status"
+      action: "Action"
+      banned: "Banned"
+      active: "Active"
+      ban: "Ban"
+      unban: "Unban"
+      no_users: "No users registered!"
   links:
     edit: "Edit"
     show: "Show"

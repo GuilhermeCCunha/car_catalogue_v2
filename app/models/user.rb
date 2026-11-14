@@ -9,6 +9,11 @@ class User < ApplicationRecord
 
   before_create :set_admin
 
+  def lock_access!(opts = { })
+    return false if self.admin?
+    super
+  end
+
   private
     def set_admin
       self.role = :admin unless User.exists?

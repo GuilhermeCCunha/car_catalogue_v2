@@ -1,2 +1,38 @@
-<h1>Admin#dashboard</h1>
-<p>Find me in app/views/admin/dashboard.html.erb</p>
+<h1 class="default-heading"><%= t('titles.dashboard')%></h1>
+<% if @users.count > 0 %>
+  <table class="mb-4 table table-hover w-75 mx-auto">
+    <thead class="table-dark">
+      <tr>
+        <th><%= t('.email') %></th>
+        <th><%= t('.status') %></th>
+        <th><%= t('.action') %></th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @users.each do |user| %>
+        <tr>
+          <td class="col-6"><%= user.email %></td>
+          <td class="col-3">
+            <span class="<%= user.access_locked? ? 'text-danger' : 'text-success' %>">
+              <%= user.access_locked? ? t('.banned') : t('.active') %>
+            </span>
+          </td>
+          <td class="col-3">
+            <% if user.access_locked? %>
+              <%= button_to t('.unban'),admin_unban_user_path(user), class: "btn btn-success", method: :post %>
+            <% else %>
+              <%= button_to t('.ban'), admin_ban_user_path(user), class: "btn btn-danger", method: :post %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+<% else %>
+  <br>
+  <p class="fw-bold text-danger text-center"><%= t('.no_users') %></p>
+  <br>
+<% end %>
+<div class="d-flex flex-column align-items-center">
+  <%= link_to t('links.sign_out'), destroy_user_session_path, method: :delete, data: { turbo_method: :delete } %>
+</div>
