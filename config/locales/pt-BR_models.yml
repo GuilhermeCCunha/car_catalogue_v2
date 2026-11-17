@@ -4,9 +4,12 @@
       car:
         one: Carro
         other: Carros
-      brand: 
+      brand:
         one: Marca
-        other: Marcas     
+        other: Marcas
+      user:
+        one: Usuário
+        other: Usuários
     attributes:
       car:
         id: Código
@@ -17,8 +20,14 @@
         brand_id: Marca
         updated_at: Atualizado em
         created_at: Criado em
-      brand:  
+      brand:
         id: Código
         brand_name: Nome da Marca
         updated_at: Atualizado em
         created_at: Criado em
+      user:
+        current_password: Senha atual
+        email: E-mail
+        password: Senha
+        password_confirmation: Confirme sua senha
+        remember_me: Lembre-se de mim
