@@ -72,7 +72,7 @@ pt-BR:
       other: "impediram que esta marca fosse salva:"
     car:
       one: "impediu que este carro fosse salvo:"
-      other: "impediram que este carro fosse salvo:"    
+      other: "impediram que este carro fosse salvo:"
   notices:
     car:
       create: "O carro foi criado com sucesso."
@@ -81,8 +81,18 @@ pt-BR:
     brand:
       create: "A marca foi criada com sucesso."
       update: "A marca foi atualizada com sucesso."
-      destroy: "A marca foi excluída com sucesso."                    
+      destroy: "A marca foi excluída com sucesso."
   devise:
+    registrations:
+      edit:
+        are_you_sure: "Você tem certeza?"
+        cancel_my_account: "Cancelar minha conta"
+        leave_blank_if_you_don_t_want_to_change_it: "deixe em branco caso não queira alterá-la"
+        unhappy: "Não está contente?"
+        update: "Atualizar"
+        we_need_your_current_password_to_confirm_your_changes: "precisamos da sua senha atual para confirmar suas mudanças"
+      new:
+        sign_up: "Inscrever-se"
     sessions:
       new:
         sign_in: "Login"
