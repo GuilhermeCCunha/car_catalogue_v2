@@ -1,4 +1,7 @@
 <h1 class="default-heading"><%= t('titles.dashboard')%></h1>
+
+<%= render "shared/flash" %>
+
 <% if @users.count > 0 %>
   <table class="mb-4 table table-hover w-75 mx-auto">
     <thead class="table-dark">
